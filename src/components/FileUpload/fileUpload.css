@@ -1,0 +1,30 @@
+.form-input::-webkit-file-upload-button {
+  display: none;
+  user-select: none;
+}
+
+.form-input::before {
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  background-color: lightgreen;
+  color: darkgreen;
+  content: 'Choose file +';
+  display: inline-flex;
+  padding: 6px 8px;
+  user-select: none;
+  margin-top: .5rem;
+  cursor: pointer;
+}
+
+.form-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+.form-container {
+  margin: .5rem 0rem;
+}
+
+.form-label {
+  font-weight: bold;
+  font-size: small;
+}

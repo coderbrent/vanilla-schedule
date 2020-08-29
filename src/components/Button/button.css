@@ -1,0 +1,53 @@
+.btn {
+  border: none;
+  width: 50%;
+  padding: .5rem;
+  font-size: 1rem;
+  font-family: 'Open Sans';
+  font-weight: bolder;
+  margin: .5rem 0rem;
+  outline: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.success {
+  background-color: lightgreen;
+  color: darkgreen;
+}
+
+.success:hover {
+  background-color: #1a9958;
+}
+
+.btn-loading {
+  filter: invert();
+}
+
+.btn .warning {
+  background-color: goldenrod;
+  color: rgb(250, 235, 206);
+}
+
+.btn-warning:hover {
+  color: goldenrod;
+  background-color: rgb(250, 235, 206);
+}
+
+.btn-info {
+  background-color: violet;
+  color: darkmagenta;
+}
+
+.btn-info:hover {
+  color: violet;
+  background-color: darkmagenta;
+}
+
+.btn[disabled] {
+  opacity: .5;
+  pointer-events: none;
+}

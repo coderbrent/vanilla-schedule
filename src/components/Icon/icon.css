@@ -1,0 +1,14 @@
+/* .ico-success {
+  position: absolute;
+  color: #2ecc71;
+} */
+
+.ico-fail {
+  position: absolute;
+  color: rgb(218, 6, 6);
+}
+
+.ico-indent {
+  font-size: 1.75rem;
+  padding-right: 7pt;
+}

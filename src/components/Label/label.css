@@ -1,0 +1,10 @@
+.label {
+    background-color: transparent;
+    font-size: small;
+    color: lightgreen;
+    font-weight: bold;
+}
+
+.label::after {
+    content: ':'
+}

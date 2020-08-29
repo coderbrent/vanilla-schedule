@@ -1,0 +1,11 @@
+.datetime-picker {
+    border-radius: 5pt;
+    border: none;
+    min-width: 95%;
+    margin: .1rem 0rem;
+    padding: .35rem;
+    font-family: 'Open Sans';
+    color: rgb(3, 12, 38);
+    outline: none;
+    transition: 0.3s;
+}
