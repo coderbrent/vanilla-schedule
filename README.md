@@ -6,7 +6,7 @@ Why "vanilla"? Two reasons!
 
 2. It's all in vanilla JS!
 
-###Motivations -
+#Motivations -
 
 1. To gain a better handle on DOM manipulation.
 
@@ -16,14 +16,14 @@ Why "vanilla"? Two reasons!
 
 What I'm using here -
 
-###Front-end:
+#Front-end:
 - HTML
 - CSS
 - JavaScript
 - Webpack
 - Babel
 
-###Back-end:
+#Back-end:
 - Node
 - Express
 - Mongo
