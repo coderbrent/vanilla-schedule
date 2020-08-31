@@ -4,7 +4,7 @@ Why "vanilla"? Two reasons!
 
 1. It's no frills! I'm just making something simple to keep track of when employees work.
 
-2. No frameworks! It's 🍦JS!
+2. No frameworks! It's vanilla JS!
 
 Motivations -
 
