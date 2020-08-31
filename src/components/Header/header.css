@@ -19,7 +19,7 @@
 .header-title {
   z-index: 1;
   font-size: 7rem;
-  color: lavenderblush;
+  color: #e4e1d8;
   margin-top: 3rem;
 }
 
@@ -37,7 +37,7 @@
   opacity: .5;
   clip-path: polygon(11% 8%, 38% 36%, 49% 47%, 39% 47%, 15% 47%, 28% 62%, 47% 88%, 21% 28%);
   background: rgb(229, 255, 0);
-  background: linear-gradient(130deg, rgba(0,212,255,0) 16%, rgba(20, 216, 20, 0.639) 54%);
+  background: linear-gradient(130deg, rgba(0,212,255,0) 16%, #e4e1d869 54%);
   width: 500px;
   height: 100%;
   right: 10px;

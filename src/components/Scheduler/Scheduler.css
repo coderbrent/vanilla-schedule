@@ -3,10 +3,6 @@
   background-color: rgba(173, 216, 230, 0.153);
 }
 
-.section {
-  /* height: 100%; */
-}
-
 .two-col-grid {
   display: grid;
   grid-auto-rows: 1fr;
