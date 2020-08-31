@@ -26,8 +26,8 @@ export function textField({ type, placeholder, styles, req }) {
   textBox.onchange = e => {
     const field = formatChecker(type, String(e.currentTarget.value).trim());
   
-    textBox.classList.toggle('error', !field.canSubmit);
-    textBox.classList.toggle('correct', field.canSubmit);
+    textBox.classList.toggle('error', !field);
+    textBox.classList.toggle('correct', field);
 
     if(field.canSubmit) {
       // container.append(successIcon)

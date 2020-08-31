@@ -47,6 +47,7 @@ export const home = () => {
   
   // about.appendChild(subSection);
   // home.appendChild(about);
+home.appendChild(userForm())
   home.appendChild(scheduler())
 
   return home;
