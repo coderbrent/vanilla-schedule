@@ -8,7 +8,6 @@ const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
 const port = 5000 || process.env.PORT;
-const Employee = require('./user');
 
 multer.diskStorage({
   filename: (req, file, cb) => {

@@ -6,7 +6,7 @@ Why "vanilla"? Two reasons!
 
 2. No frameworks! It's vanilla JS!
 
-Motivations -
+##Motivations -
 
 1. Build something semi-complex w/o React.
 
@@ -14,13 +14,14 @@ Motivations -
 
 What I'm using here -
 
-Front-end:
+##Front-end:
 - HTML
 - CSS
 - JavaScript
 - Webpack
+- Babel
 
-Back-end:
+##Back-end:
 - Node
 - Express
 - Mongo

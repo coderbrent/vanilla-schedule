@@ -1,7 +1,7 @@
 {
-  "name": "vanilla",
+  "name": "vanilla-schedule",
   "version": "1.0.0",
-  "description": "exercise project",
+  "description": "a simple employee scheduling application",
   "private": "true",
   "author": "@brenta1283",
   "license": "MIT",
