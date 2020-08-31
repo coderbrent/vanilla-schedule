@@ -1,6 +1,6 @@
-# vanilla-schedule
+# vanilla-schedule 🍦
 
-🍦 Why "vanilla"? Two reasons!
+Why "vanilla"? Two reasons!
 
 1. It's no frills! I'm just making something simple to keep track of when employees work.
 
