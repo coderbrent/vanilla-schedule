@@ -1,6 +1,7 @@
 import { header } from '../components/Header/header';
 import { button } from '../components/Button/button';
 import { userForm } from '../components/Form/userForm';
+import { Toast } from '../components/Toast/toast';
 import { scheduler } from '../components/Scheduler/Scheduler';
 import '../style.css';
 
@@ -38,7 +39,7 @@ export const home = () => {
      })
     })
   );
-  
+
   section.appendChild(subSectionTitle);
   // subSectionTitle.appendChild(userResults);
   // section.appendChild(para);
@@ -47,7 +48,7 @@ export const home = () => {
   
   // about.appendChild(subSection);
   // home.appendChild(about);
-home.appendChild(userForm())
+  home.appendChild(userForm())
   home.appendChild(scheduler())
 
   return home;
