@@ -5,11 +5,11 @@
  * 1. They can only view and edit their own schedule. All other details are writable by managers only.
  * 2. 
  * 
- * @param {*} name
- * @param {String} phone
- * @param {String} email
- * @param {Buffer} avatar
- * @param {Object} schedule
+ * @param {String} name input from the newUser form (manager only)
+ * @param {String} phone input from the newUser form (manager only)
+ * @param {String} email input from the newUser form (manager only)
+ * @param {Buffer} avatar input from the newUser form (manager only)
+ * @param {Object} schedule input from the employeeScheduleForm (employee and manager)
  */
 
 module.exports = class Employee {
