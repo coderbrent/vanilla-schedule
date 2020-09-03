@@ -1,9 +1,8 @@
 /**
- * @desc this class is used to generate new Employees. It features a variety
- * of methods that apply to the Employee. Employees follow a few simple rules:
+ * @desc this parent class is used to generate new Employees. It features a variety
+ * of methods that apply to the Employee only. Employees follow one simple rule:
  * 
- * 1. They can only view and edit their own schedule. All other details are writable by managers only.
- * 2. 
+ * 1. They may only view and edit their own schedules. All other details are writable by managers only.
  * 
  * @param {String} name input from the newUser form (manager only)
  * @param {String} phone input from the newUser form (manager only)
@@ -11,6 +10,8 @@
  * @param {Buffer} avatar input from the newUser form (manager only)
  * @param {Object} schedule input from the employeeScheduleForm (employee and manager)
  */
+
+const moment = require('moment');
 
 module.exports = class Employee {
   constructor({ name, phone, email, avatar, schedule }) {
@@ -29,7 +30,17 @@ module.exports = class Employee {
     console.log(this.schedule);
   }
 
-  setUserShift(day, start, end) {
+  /**
+   * @desc Sets an employee's shift (start time, end time) for a given day
+   *  
+   * @param {String} day the day of the week the employee
+   * @param {String} start 
+   * @param {String} end
+   */
+
+  //TODO: Remove the day field and make the schedule simply start and end times.
+  //The "day" data is already in the native JS Date instance. 
+  setShift(day, start, end) {
     const updatedSched = Object.assign(this.schedule, {
       [day]: {
         start: new Date(start),
@@ -37,13 +48,21 @@ module.exports = class Employee {
       }
     })
     return updatedSched;
-  }
+  };
 
-  getUserShift(day) {
+/**
+ * @desc Gets the employee's shift (util method).
+ * @param {String} day the day of the week to grab for shift info.
+ */
+  getShift(day) {
     return this.schedule[day];
-  }
+  };
 
-  getShiftLength(day) { //internally used by the class only
+  /**
+   * @desc Gets the employee's shift length of a given day (util method).
+   * @param {String} day the day of the week to measure length of shift on.
+   */
+  getShiftLength(day) {
     let startOfDay = this.schedule[day].start;
     let endOfDay = this.schedule[day].end;
 
@@ -52,10 +71,18 @@ module.exports = class Employee {
     const shiftLength = (Math.abs(Math.round(diff / 60)))
     
     return shiftLength;
-  }
+  };
 
+  /**
+   * @desc Provides the total hours worked based within a given range of days.
+   * Example: user inputs tuesday - thursday -> returns sum of hours worked between those days.
+   * @param {Array} range an array of multiple selected days worked.
+   * @return {String} returns the total hours worked for a given range of days.
+   */
   getTotalHoursWorkedByRange(range) { 
     const { startDay, endDay } = range;
+    //Gets all the days from an employee's schedule
+    //TODO: This could become an issue as the schedule becomes larger...
     const allDaysWorked = Object.keys(this.schedule);
     let total = 0;
   
@@ -71,8 +98,60 @@ module.exports = class Employee {
     })
     console.log(total)
     return total;
-  }  
+  };
+
+  createSchedule(shifts) {
+    
+  }
+  
+};
+
+//if we are storing a users schedule, how much of it do we store?
+//schedules are linear time constructs - they have a past, present and future.
+//what does that look like in computer w0rdZ?
+//what is a shift comprised of? month year day time
+
+const getEmployee = async employeeId => {
+  const employee = await fetch(`http://localhost:5000/employees/get-employee/${employeeId}`)
+    .then(response => { 
+      if(!response) {
+        throw new Error('There was a network error.')
+      }
+        return response.json();
+    })
+    .then(employeeData => employeeData);
+
+  console.log(employee);
+  return employee;
 }
+
+const makeSchedule = async (employeeId, shifts) => {
+  const employee = getEmployee(employeeId)
+  
+  console.log(employee);
+}
+
+
+//TODO: Put this in a separate file 
+const calMonths = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+];
+
+
+
+
+
 
 
 

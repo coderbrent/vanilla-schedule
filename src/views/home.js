@@ -17,8 +17,7 @@ export const home = () => {
   about.className = 'section';
   const userImg = document.createElement('img');
   const userResults = document.createElement('div');
-  let imageData = fetch('http://localhost:5000/users').then(res => res.json()).then(data => data[0].avatar.data);
-
+  
   userResults.appendChild(userForm())
 
   const textSection = document.createElement('textarea');
@@ -48,8 +47,18 @@ export const home = () => {
   
   // about.appendChild(subSection);
   // home.appendChild(about);
-  home.appendChild(userForm())
-  home.appendChild(scheduler())
+  // home.appendChild(userForm())
+  // home.appendChild(scheduler())
+
+  const getEmployeeById = async employeeId => {
+    let fetchedEmployee = await fetch(`http://localhost:5000/employees/get-employee/${employeeId}`)
+      .then(response => response.json())
+      .then(employeeData => employeeData);
+
+    return fetchedEmployee;
+  };
+
+  getEmployeeById('5f51367c59a5c222d93a8d41');
 
   return home;
 }
