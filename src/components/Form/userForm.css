@@ -4,6 +4,7 @@
 }
 
 .form-wrapper {
+    z-index: 10000;
     margin: 0 auto;
     font-family: var(--main-font-family);
     max-width: 50%;

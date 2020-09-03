@@ -43,7 +43,7 @@ export const userForm = () => {
     req: true
   })
 
-  const dateTime = DateTimePicker();
+  // const dateTime = DateTimePicker();
 
   const submitBtn = button({
     text: 'submit',
@@ -90,7 +90,6 @@ export const userForm = () => {
   userForm.appendChild(userName);
   userForm.appendChild(userEmail);
   userForm.appendChild(userPhone);
-  userForm.appendChild(dateTime);
   userForm.appendChild(fileUpload({ name: 'avatar'}));
   userForm.appendChild(submitBtn);
 

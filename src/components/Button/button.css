@@ -1,4 +1,5 @@
 .btn {
+  z-index: 10000;
   border: none;
   width: 50%;
   padding: .5rem;
