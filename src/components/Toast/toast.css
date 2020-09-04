@@ -1,17 +1,18 @@
 .toast {
-    left: 900px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0rem 1rem;
     align-items: center;
     position: fixed;
-    padding: 1rem;
-    height: 30px;
-    width: 200px;
+    bottom: 8px;
+    border-radius: 3pt;
+    z-index: 100000;
+    height: 8%;
+    width: 25%;
+    font-weight: bold;
+    font-size: small;
+    background-color: rgb(255, 255, 255);
     font-family: 'Open Sans';
-    text-align: center;
-    border-radius: 5pt;
-    border: solid 1px #333;
-    transition: all cubic-bezier(0.215, 0.610, 0.355, 1) 300ms;
     box-shadow:
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),
         0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -21,15 +22,48 @@
         0 100px 80px rgba(0, 0, 0, 0.12)
 }
 
-.success {
-    z-index: 10000;
-    background-color: rgb(68, 176, 68);
-    color: lightgreen;
+.toast.show {
+    animation: slide-in .8s ease-in;
 }
 
-.info {
-    z-index: 10000;
-    background-color: goldenrod;
-    color: lightgoldenrodyellow;
+.toast.hide {
+    animation: fade-out 3s ease-out normal forwards;
+}
+
+.toast.success {
+    border-top: solid 4px #66f387;
+    background-color: rgb(216, 249, 216);
+    color: rgb(0, 140, 0);
+}
+
+.toast.fail {
+    border-top: solid 4px darkred;
+    color: rgb(65, 0, 0)
+}
+
+.toast.info {
+    border-top: solid 4px darkslateblue;
+    background-color: lightsteelblue;
+    color: darkslateblue;
+}
+
+@keyframes slide-in {
+    from {
+        left: -500px;
+    }
+
+    to {
+        left: 0px;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: -500px;
+    }
 }
 
