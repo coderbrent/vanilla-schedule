@@ -1,14 +1,43 @@
-/* .ico-success {
-  position: absolute;
-  color: #2ecc71;
-} */
-
-.ico-fail {
-  position: absolute;
-  color: rgb(218, 6, 6);
+.ico {
+  position: relative;
+  font-size: 1.25rem;
 }
 
-.ico-indent {
+.ico.success {
+  position: relative;
+  color: #2ecc71;
+  font-size: 1.25rem;
+}
+
+.ico.fail {
+  position: relative;
+  color: darkred;
+  font-size: 1.25rem;
+}
+
+.ico.info {
+  position: relative;
+  color: darkslateblue;
+  font-size: 1.25rem;
+}
+
+.ico.indent {
   font-size: 1.75rem;
   padding-right: 7pt;
+}
+
+.ico.sm {
+  font-size: 1rem;
+}
+
+.ico.md {
+  font-size: 1.25rem;
+}
+
+.ico.lg {
+  font-size: 1.75rem;
+}
+
+.ico.xl {
+  font-size: 1.75rem;
 }
