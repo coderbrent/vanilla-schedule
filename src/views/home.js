@@ -1,8 +1,8 @@
 import { header } from '../components/Header/header';
 import { button } from '../components/Button/button';
 import { userForm } from '../components/Form/userForm';
-import { Toast } from '../components/Toast/toast';
 import { scheduler } from '../components/Scheduler/Scheduler';
+import { toast } from '../components/Toast/toast';
 import '../style.css';
 
 export const home = () => {
@@ -18,7 +18,7 @@ export const home = () => {
   const userImg = document.createElement('img');
   const userResults = document.createElement('div');
   
-  userResults.appendChild(userForm())
+  userResults.appendChild(userForm());
 
   const textSection = document.createElement('textarea');
   textSection.className = 'textbox';
@@ -38,17 +38,11 @@ export const home = () => {
      })
     })
   );
-
+  
   section.appendChild(subSectionTitle);
-  // subSectionTitle.appendChild(userResults);
-  // section.appendChild(para);
-  
-  // home.appendChild(section);
-  
-  // about.appendChild(subSection);
-  // home.appendChild(about);
-  // home.appendChild(userForm())
-  // home.appendChild(scheduler())
+  home.appendChild(section);
+  home.appendChild(scheduler());
+  home.appendChild(toast('User was not added!', true, 'fail'));
 
   const getEmployeeById = async employeeId => {
     let fetchedEmployee = await fetch(`http://localhost:5000/employees/get-employee/${employeeId}`)
