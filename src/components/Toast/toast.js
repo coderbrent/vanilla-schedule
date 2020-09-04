@@ -1,27 +1,42 @@
 /**
- * @desc a simple toast component that will display unobtrusive update messages.
- * for ex. "User successfully added". Information that does not require the user to
- * make any decisions.
- * 
- * Design considerations - 
- * - A toast should be unobtrusive. It's only to display quick
- * info 'bits'.
- * 
- * - It should stay on screen for 3 - 5 seconds then disappear.
- * 
- * @param {String} msg the text content for the message.
- * @param {String} type the type of toast (CSS class) - ex. info, success, warning.
- * @param {Boolean} visible takes true or false to determine component visibility.
+ * @desc Displays small update messages in UI for a few seconds. Good to use
+ * for things like success/fail msgs on CRUD operations.
+ * Adjust the timing to change how long the message displays before
+ * disappearing.
  */
 
 import '../Toast/toast.css';
+import { faExclamationCircle, faInfoCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { icon } from '../Icon/icon';
 
-export function Toast(msg, type, visible) {
+export function toast(msg, visible, type) {
   let toast = document.createElement('div');
   toast.className = 'toast';
-  toast.classList.add(type)
+  //TODO - the toast should slide in from the bottom left side of the screen
+  //stick around for 4s then disappear. That doesn't work. Make it.
+  toast.onload = setTimeout(() => { 
+    toast.classList.add('hide');
+  }, 4000);
+  toast.classList.toggle('show', visible);
   toast.innerText = msg;
-  visible ? toast.style.left = '0px' : null;
+  
+  switch(type) {
+    case 'success': { 
+      toast.appendChild(icon(faCheckCircle, 'ico-success'));
+      toast.classList.add('success');
+    };
+    break;
+    case 'fail': { 
+      toast.appendChild(icon(faExclamationCircle, 'ico-fail'));
+      toast.classList.add('fail');
+    };
+    break;
+    case 'info': {
+      toast.appendChild(icon(faInfoCircle, 'ico-info'));
+      toast.classList.add('info');
+    }
+    default: null;
+  }
   
   return toast;
 }
