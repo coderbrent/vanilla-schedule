@@ -22,17 +22,17 @@ export function toast(msg, visible, type) {
   
   switch(type) {
     case 'success': { 
-      toast.appendChild(icon(faCheckCircle, 'ico-success'));
+      toast.appendChild(icon(faCheckCircle, 'toast-ico'));
       toast.classList.add('success');
     };
     break;
     case 'fail': { 
-      toast.appendChild(icon(faExclamationCircle, 'ico-fail'));
+      toast.appendChild(icon(faExclamationCircle, 'toast-ico'));
       toast.classList.add('fail');
     };
     break;
     case 'info': {
-      toast.appendChild(icon(faInfoCircle, 'ico-info'));
+      toast.appendChild(icon(faInfoCircle, 'toast-ico'));
       toast.classList.add('info');
     }
     default: null;
