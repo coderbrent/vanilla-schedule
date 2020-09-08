@@ -1,12 +1,10 @@
 .modal-wrapper {
-  display: flex;
-  flex-direction: column;
-  margin: 20% 25%;
-  background-color: lavender;
+  margin: 10% 25%;
+  position: fixed;
 }
 
 .modal {
-  font-family: Arial;
+  font-family: Alice;
   visibility: hidden;
   position: fixed;
   z-index: 1;
@@ -22,9 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(92, 0, 92);
   padding: .5rem 1rem;
-  color: plum;
   font-size: 1.25rem;
   height: 2rem;
 }
@@ -32,17 +28,14 @@
 .modal-content {
   display: block;
   font-size: smaller;
-  color: blueviolet;
   padding: 1.5rem;
   border: none;
   width: auto;
 }
 
 .close {
-  background-color: plum;
   border: none;
   border-radius: 50pt;
-  color: blueviolet;
   font-size: 18px;
   font-weight: bold;
 }

@@ -4,22 +4,20 @@
 }
 
 .header {
-  font-family: Oswald;
-  line-height: 5.4rem;
-  flex-grow: 1;
+  font-family: 'Oswald';
+  line-height: 8rem;
   flex-direction: column;
   display: flex;
   text-align: center;
   align-items: center;
-  background: #222;
-  padding: 3rem;
+  background: transparent;
   transition: all 500ms ease-in-out;
 }
 
 .header-title {
   z-index: 1;
   font-size: 7rem;
-  color: #e4e1d8;
+  color: #9d7b16;
   margin-top: 3rem;
 }
 
@@ -31,23 +29,10 @@
 }
 
 .header-shape {
-  position: absolute;
-  object-fit: cover;
-  z-index: 0;
-  opacity: .5;
-  clip-path: polygon(11% 8%, 38% 36%, 49% 47%, 39% 47%, 15% 47%, 28% 62%, 47% 88%, 21% 28%);
-  background: rgb(229, 255, 0);
-  background: linear-gradient(130deg, rgba(0,212,255,0) 16%, #e4e1d869 54%);
-  width: 500px;
   height: 100%;
   right: 10px;
   transform: scale(3, 3) skew(20deg, 0deg);
-  /* animation: bolt forwards 3s alternate-reverse infinite; */
   transition: all ease-in-out;
-}
-
-.hide {
-  visibility: hidden;
 }
 
 .blur {

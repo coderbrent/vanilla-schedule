@@ -12,15 +12,15 @@ export function modal(data, style, size, visible, form) {
   content.innerText = data;
 
   modal.classList.add('modal');
-  modalHeader.classList.add('modal-header');
-  modalContent.classList.add('modal-content');
+  // modalHeader.classList.add('modal-header');
+  // modalContent.classList.add('modal-content');
   modalWrapper.className = 'modal-wrapper';
   
   modalHeader.innerText = style === 'success' ? 'Yay!' : 'Uh oh.' 
 
   size ? modalContent.classList.add(size) : null;
   style ? modalContent.classList.add(style) : null;
-  form ? modalContent.appendChild(form) : null;
+  form ? modalWrapper.appendChild(form) : null;
 
   modal.style.visibility = visible;
 
@@ -31,17 +31,17 @@ export function modal(data, style, size, visible, form) {
     modal.style.visibility = 'hidden';
   };
 
-  modalContent.appendChild(content);
-  modalContent.appendChild(button({ 
-    text: 'OK',
-    style: 'success',
-    fullWidth: true,
-    disabled: false,
-    action: () => modal.style.visibility = 'hidden'
-  }))
-  modalHeader.appendChild(closeBtn);
-  modalWrapper.appendChild(modalHeader);
-  modalWrapper.appendChild(modalContent);
+  // modalContent.appendChild(content);
+  // modalContent.appendChild(button({ 
+  //   text: 'OK',
+  //   style: 'success',
+  //   fullWidth: true,
+  //   disabled: false,
+  //   action: () => modal.style.visibility = 'hidden'
+  // }))
+  // modalHeader.appendChild(closeBtn);
+  // modalWrapper.appendChild(modalHeader);
+  // modalWrapper.appendChild(modalContent);
   
   modal.appendChild(modalWrapper);
 

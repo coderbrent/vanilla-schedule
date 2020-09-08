@@ -1,6 +1,7 @@
 import './header.css'
+import {button} from '../Button/button';
 
-export const header = ({ title, subtitle, button }) => {
+export const header = ({ title, subtitle }) => {
   const header = document.createElement('div');
   const headerTitle = document.createElement('h1');
   const headerSubtitle = document.createElement('h3');
@@ -15,11 +16,12 @@ export const header = ({ title, subtitle, button }) => {
   
   headerTitle.innerText = title;
   headerSubtitle.innerText = subtitle;
-
+  
   header.appendChild(headerShape);
   header.appendChild(headerTitle);
   header.appendChild(headerSubtitle);
-  header.appendChild(button);
+
+  header.appendChild(button({ text: 'lets go', styles: 'success' }));
 
   contentWrapper.appendChild(header);
   document.body.onload = () => headerShape.classList.add('blur');

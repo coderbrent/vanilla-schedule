@@ -6,8 +6,8 @@
 .form-input::before {
   font-family: 'Open Sans';
   font-size: 1rem;
-  background-color: lightgreen;
-  color: darkgreen;
+  color: #3A4457;
+  background-color: #ecd6c7;
   content: 'Choose file +';
   display: inline-flex;
   padding: 6px 8px;

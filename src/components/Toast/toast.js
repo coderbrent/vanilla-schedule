@@ -15,9 +15,9 @@ export function toast(msg, visible, type) {
   //TODO - the toast should slide in from the bottom left side of the screen
   //stick around for 4s then disappear. That doesn't work. Make it.
   toast.onload = setTimeout(() => { 
-    toast.classList.add('hide');
+    toast.classList.add('show');
   }, 4000);
-  toast.classList.toggle('show', visible);
+  toast.classList.toggle('hide', visible);
   toast.innerText = msg;
   
   switch(type) {

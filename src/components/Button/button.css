@@ -15,12 +15,12 @@
   color: white;
 }
 
-.success {
-  background-color: lightgreen;
-  color: darkgreen;
+.btn.success {
+  color: #3A4457;
+  background-color: #ecd6c7;
 }
 
-.success:hover {
+.btn.success:hover {
   background-color: #1a9958;
 }
 

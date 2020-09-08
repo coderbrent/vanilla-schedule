@@ -27,7 +27,7 @@
 }
 
 .toast.hide {
-    animation: fade-out 3s ease-out normal forwards;
+    animation: slide-out .3s ease-in;
 }
 
 .toast.success {
@@ -50,19 +50,23 @@
 @keyframes slide-in {
     from {
         left: -500px;
+        transform: skew(50deg, 80deg)
     }
 
     to {
         left: 0px;
+        transform: skew(0deg, 0deg)
     }
 }
 
-@keyframes fade-out {
+@keyframes slide-out {
     from {
+        transform: skew(0deg, 0deg);
         left: 0px;
     }
 
     to {
+        transform: skew(50deg, 80deg);
         left: -500px;
     }
 }

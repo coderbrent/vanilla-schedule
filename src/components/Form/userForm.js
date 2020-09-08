@@ -48,13 +48,11 @@ export const userForm = () => {
   const submitBtn = button({
     text: 'submit',
     type: 'submit',
-    style: 'success',
+    styles: 'success',
     fullWidth: true,
     disabled: false,
     action: async event => {
       event.preventDefault();
-
-      console.log(document.getElementById('avatar').files[0])
 
       formData.append('name', userName.children[1].value.trim())
       formData.append('phone', userPhone.children[1].value.trim())

@@ -1,6 +1,6 @@
 :root {
     --main-font-family: 'Open Sans';
-    --title-font-family: 'Oswald';
+    --title-font-family: 'Alice';
 }
 
 .form-wrapper {
@@ -22,16 +22,18 @@
     display: flex;
     font-family: var(--title-font-family);
     align-items: center;
+    padding-right: 1rem;
     justify-content: space-between;
     text-indent: 1rem;
     font-size: 2rem;
     font-weight: bold;
-    color: darkgreen;
-    background-color: lightgreen;
+    color: #3A4457;
+    background-color: #ecd6c7;
     height: 3.5rem;
 }
 
 .form {
-    background-color: rgb(69, 69, 69);
+    color: #AE8D65;
+    background-color: #3A4457;
     padding: 1rem 2rem;
 }
