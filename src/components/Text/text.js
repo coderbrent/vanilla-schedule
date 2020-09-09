@@ -1,6 +1,6 @@
-import '../Title/title.css';
+import '../Text/text.css';
 
-export function title(type, text) {
+export function Text(type, text) {
   switch(type) {
     case 'title': { 
       const el = document.createElement('h1');

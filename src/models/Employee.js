@@ -11,8 +11,6 @@
  * @param {Object} schedule input from the employeeScheduleForm (employee and manager)
  */
 
-const moment = require('moment');
-
 module.exports = class Employee {
   constructor({ name, phone, email, avatar, schedule }) {
     this.name = name;
@@ -108,8 +106,6 @@ module.exports = class Employee {
 
 //if we are storing a users schedule, how much of it do we store?
 //schedules are linear time constructs - they have a past, present and future.
-//what does that look like in computer w0rdZ?
-//what is a shift comprised of? month year day time
 
 const getEmployee = async employeeId => {
   const employee = await fetch(`http://localhost:5000/employees/get-employee/${employeeId}`)
@@ -131,25 +127,9 @@ const makeSchedule = async (employeeId, shifts) => {
   console.log(employee);
 }
 
-
-//TODO: Put this in a separate file 
-const calMonths = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December'
-];
-
-
-
+const getSchedule = () => {
+  
+}
 
 
 

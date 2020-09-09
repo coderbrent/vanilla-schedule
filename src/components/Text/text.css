@@ -1,0 +1,17 @@
+.title {
+  margin: 0;
+  font-size: 3rem;
+  font-family: 'Roboto Slab';
+  color: #222;
+}
+
+.sub-title {
+  font-style: oblique;
+  color: rgb(149, 185, 198);
+}
+
+.body {
+  font-family: 'Open Sans';
+  font-size: .875rem;
+  color: #444;
+}

@@ -22,6 +22,4 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/employees', employeeRoutes);
 app.use('/managers', managerRoutes);
 
-
-
 app.listen(port, () => console.log('listening on port 5000'));
