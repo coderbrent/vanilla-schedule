@@ -1,13 +1,12 @@
 :root {
     --main-font-family: 'Open Sans';
-    --title-font-family: 'Alice';
+    --title-font-family: 'Roboto Slab';
 }
 
 .form-wrapper {
-    z-index: 10000;
     margin: 0 auto;
     font-family: var(--main-font-family);
-    max-width: 50%;
+    max-width: inherit;
     min-width: 300px;
     box-shadow:
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -18,22 +17,8 @@
         0 100px 80px rgba(0, 0, 0, 0.12)
 }
 
-.form-header {
-    display: flex;
-    font-family: var(--title-font-family);
-    align-items: center;
-    padding-right: 1rem;
-    justify-content: space-between;
-    text-indent: 1rem;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #3A4457;
-    background-color: #ecd6c7;
-    height: 3.5rem;
-}
-
 .form {
-    color: #AE8D65;
-    background-color: #3A4457;
+    background-color: darkslateblue;
+    color: rgb(173, 197, 205);
     padding: 1rem 2rem;
 }

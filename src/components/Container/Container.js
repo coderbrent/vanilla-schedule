@@ -15,10 +15,11 @@ export const Container = (type) => {
   scheduleBody.appendChild(DayCarousel());
 
   scheduleHeader.innerText = 'Set Your Schedule';
-  scheduleFooter.innerText = 'this is the footer';
+  scheduleFooter.innerText = 'Logged in as: ';
 
   containerWrapper.appendChild(scheduleHeader);
   containerWrapper.appendChild(scheduleBody);
   containerWrapper.appendChild(scheduleFooter);
+  
   return containerWrapper;
 }

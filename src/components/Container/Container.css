@@ -5,13 +5,13 @@
   max-width: 860px;
   height: inherit;
   background-color: rgb(195, 185, 201);
-  height: 50%;
+  height: 65%;
 }
 
 .schedule-title {
   margin: 2.5rem 0rem;
   width: 53%;
-  line-height: 2.5rem;
+  line-height: 3.5rem;
   border-bottom: solid 9px rgb(141, 147, 182);
   font-size: 4rem;
   font-weight: 600;

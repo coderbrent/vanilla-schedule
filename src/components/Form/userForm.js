@@ -27,23 +27,21 @@ export const userForm = () => {
     placeholder: 'Brent Abruzese',
     styles: ['input'],
     req: true
-  })
+  });
 
   const userEmail = textField({
     type: 'email',
     placeholder: 'brent@gmail.com',
     styles: ['input'],
     req: true
-  })
+  });
 
   const userPhone = textField({
     type: 'tel',
     placeholder: '718-816-8324',
     styles: ['input'],
     req: true
-  })
-
-  // const dateTime = DateTimePicker();
+  });
 
   const submitBtn = button({
     text: 'submit',
@@ -80,7 +78,6 @@ export const userForm = () => {
           }
         }
       })
-
     } 
   });
 
