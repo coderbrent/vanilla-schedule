@@ -21,7 +21,8 @@
 }
 
 .btn.success:hover {
-  background-color: #1a9958;
+  background-color: #ecd6c75f;
+  color: #ecd6c7;
 }
 
 .btn-loading {

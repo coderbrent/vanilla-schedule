@@ -17,12 +17,14 @@
 
 .modal-header {
   display: flex;
-  color: lightblue;
-  background-color: rgb(71, 61, 139);
+  font-family: 'Roboto Slab';
+  color: black;
+  background-color: white;
   align-items: center;
   justify-content: space-between;
   padding: .5rem 1rem;
   font-size: 1.25rem;
+  font-weight: 300;
   height: 2rem;
 }
 
@@ -43,7 +45,6 @@
 
 .close:hover,
 .close:focus {
-  /* box-shadow: 0px 0px 3px 2px lavender; */
   text-decoration: none;
   cursor: pointer;
 }

@@ -54,8 +54,10 @@ export const DayCarousel = () => {
   const upcomingWeek = getNowTillMonthEnd().slice(0, 7);
   const upcomingWeekBreakdown = upcomingWeek.map(el => el.split(' '));
   const scheduleView = document.createElement('div');
-  
+
   scheduleView.className = 'schedule-view';
+
+  console.log(localStorage)
 
   const createTextNode = (type, style, txt) => {
     let el = document.createElement(type);
@@ -78,7 +80,6 @@ export const DayCarousel = () => {
     dayBlock.id = el[0];
 
     dayBlock.onclick = e => {
-      let thisDay = e.currentTarget.data;
       let dayId = e.currentTarget.id;
       document.body.appendChild(
         modal(
@@ -95,6 +96,6 @@ export const DayCarousel = () => {
     scheduleView.appendChild(dayBlock)
     
   })
-    
+  
   return scheduleView;
 }

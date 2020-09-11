@@ -12,6 +12,11 @@ const webpackDevMiddleware = require('webpack-dev-middleware');
 const config = require('./webpack.config.js');
 const compiler = webpack(config);
 
+app.use(cors());
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/employees', employeeRoutes);
+app.use('/managers', managerRoutes);
 app.use(webpackDevMiddleware(compiler, {
   publicPath: config.output.publicPath,
 }));
@@ -23,11 +28,5 @@ mongoose.connect('mongodb://localhost:27017',
   });
 
 db.on('open', () => console.log('db connection successful'))
-
-app.use(cors());
-app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/employees', employeeRoutes);
-app.use('/managers', managerRoutes);
 
 app.listen(port, () => console.log('listening on port 3000'));

@@ -2,8 +2,9 @@
     border: none;
     min-width: 95%;
     margin: .1rem 0rem;
-    padding: .35rem;
+    padding: .5rem;
     font-family: inherit;
     color: rgb(3, 12, 38);
     outline: none;
+    background-color: rgb(230, 213, 215);
 }

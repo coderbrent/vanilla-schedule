@@ -71,10 +71,13 @@ router.post('/create-schedule/:id', async (req, res) => {
 
 //Update a SINGLE employee Schedule
 router.put('/update-schedule/:id', (req, res) => {
-  Employee.findByIdAndUpdate({ id: req.params.id }, (err, response) => {
+  const { id } = req.params;
+  const { schedule } = req.body;
+  
+  Employee.findByIdAndUpdate(id, { "schedule": schedule },
+  { upsert: true, useFindAndModify: false, new: true }, (err, response) => {
     if(err) console.error(err);
-    //TODO: Create the post route for new schedule. Look up mongoose
-    //docs findByIdAndUpdate
+    res.json(response);
   })
 })
 

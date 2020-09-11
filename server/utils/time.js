@@ -6,11 +6,11 @@ export const getNowTillMonthEnd = () => {
   let days = [];
   let day = startOfWeek;
 
-  //runs while the 
+  //runs while the current day is less than the endOfMonth...
   while (day <= endOfMonth) {
     //push the init date into the days array...
     days.push(day.toDate());
-    //moments are mutable, so if we don't clone the moment, we will just keep mutating the same moment and storing that.
+    //NOTE: moments are mutable, so if we don't clone the moment first, we will just keep overwriting the same moment and storing that.
     day = day.clone().add(1, 'd');
 }
   console.log(days)
