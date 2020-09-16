@@ -11,15 +11,9 @@ export const formatChecker = (fieldType, input) => {
   const isName = /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{1,}$/;
 
   switch(fieldType) {
-    case 'name': {
-      return input !== '' && isName.test(input) ? true : false;
-    }
-    case 'email': {
-      return input !== '' && isEmail.test(input) ? true : false;
-    }
-    case 'tel': { 
-      return input !== '' && isPhone.test(input) ? true : false;
-    }
+    case 'name': return input !== '' && isName.test(input);
+    case 'email': return input !== '' && isEmail.test(input);
+    case 'tel': return input !== '' && isPhone.test(input);
     default: return input;
   }
-}
+};

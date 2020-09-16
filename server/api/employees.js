@@ -9,13 +9,14 @@ multer.diskStorage({
   filename: (req, file, cb) => {
     cb(null, file.filename + '-' + Date.now());
   }
-})
+});
 
 const upload = multer({ dest: 'uploads' });
 
 router.post('/create-employee', upload.single('avatar'), (req, res) => {
   const { name, email, tel } = req.body;
-  console.log(req)
+  
+  console.log(req);
   
   const newEmployee = Employee({ 
     name, 
@@ -64,8 +65,18 @@ router.post('/create-schedule/:id', async (req, res) => {
   const { schedule } = req.body;
   console.log(schedule);
   
-    await Employee.findByIdAndUpdate(req.params.id, {schedule}, { upsert: true, new: true, useFindAndModify: false });
-
+    await 
+      Employee.findByIdAndUpdate(
+        req.params.id,
+        { 
+          schedule
+        }, 
+        {
+           upsert: true, 
+           new: true, 
+           useFindAndModify: false 
+        }
+      );
     res.json('the users schedule was successfully created!');
 })
 

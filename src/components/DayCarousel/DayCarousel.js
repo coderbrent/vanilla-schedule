@@ -7,7 +7,6 @@ import { getNowTillMonthEnd } from '../../utils/time';
 import Employee from '../../models/Employee';
 import { modal } from '../Modal/modal';
 import { button } from '../Button/button';
-import { label } from '../Label/label';
 import { TimePicker } from '../TimePicker/TimePicker';
 
 const addUserShiftForm = (data, formAction) => {
@@ -21,8 +20,8 @@ const addUserShiftForm = (data, formAction) => {
   labelForStart.innerText = 'Start Time: ';
   labelForEnd.innerText = 'End Time: ';
 
-  const startTimeControl = labelForStart.appendChild(TimePicker('startOfShift', data));
-  const endTimeControl = labelForEnd.appendChild(TimePicker('endOfShift', data));
+  const startTimeControl = labelForStart.appendChild(TimePicker('start', data));
+  const endTimeControl = labelForEnd.appendChild(TimePicker('end', data));
 
   formContent.appendChild(startTimeControl);
   formContent.appendChild(endTimeControl);
@@ -34,7 +33,7 @@ const addUserShiftForm = (data, formAction) => {
     fullWidth: true,
     action: e => { 
       e.preventDefault();
-      formAction;
+      () => formAction;
     }
   }))
   
@@ -56,8 +55,6 @@ export const DayCarousel = () => {
   const scheduleView = document.createElement('div');
 
   scheduleView.className = 'schedule-view';
-
-  console.log(localStorage)
 
   const createTextNode = (type, style, txt) => {
     let el = document.createElement(type);

@@ -23,7 +23,7 @@ module.exports = {
       template: './schedule.html'
     }),
     new MomentLocalesPlugin(),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin(),
   ],
   module: {
     rules: [

@@ -1,3 +1,9 @@
+@media screen and (max-width: 540px) {
+  .schedule-view {
+    display: flex;
+  }
+}
+
 .schedule-view {
   display: grid;
   grid-auto-columns: 1fr;

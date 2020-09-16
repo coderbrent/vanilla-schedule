@@ -9,12 +9,11 @@ export const TimePicker = (shiftType, dayData) => {
   timePicker.id = shiftType;
   
   timePicker.onchange = e => {
-    dayData.splice(4, 1, e.currentTarget.value);
-    let newShiftData = new Date(dayData.join(' '));
-    localStorage.setItem(dayData[0] + '- ' + shiftType, newShiftData);
-
+    let thisDay = dayData.splice(4, 1, e.currentTarget.value);
+    let newShiftData = new Date(thisDay.join(' '));
+    localStorage.setItem(dayData[0] + ' - ' + shiftType, newShiftData);
   }
-
+  
   return timePicker;
 }
 
